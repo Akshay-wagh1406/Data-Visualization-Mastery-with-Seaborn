@@ -1,0 +1,21 @@
+import imageio
+
+images = []
+
+file_names = [
+    'visualizations/sales_trend.png',
+    'visualizations/category_sales.png',
+    'visualizations/heatmap.png',
+    'visualizations/customer_segment.png'
+]
+
+for filename in file_names:
+    images.append(imageio.imread(filename))
+
+imageio.mimsave(
+    'dashboard_demo.gif',
+    images,
+    duration=1
+)
+
+print("GIF Created Successfully!")
